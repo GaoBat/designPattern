@@ -6,6 +6,7 @@ package com.wayne.singleton;
 //注意lazy initialization形式中的synchronized,这个synchronized很重要
 //如果没有synchronized,那么使用getInstance()是有可能得到多个Singleton实例
 //一般认为第一种形式更加安全些
+//第二种采用懒加载效率更高
 public class SingletonDemo2 {
     private static SingletonDemo2 instance = null;
 
