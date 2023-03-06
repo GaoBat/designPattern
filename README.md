@@ -27,9 +27,9 @@
 为了使软件的结构更加清晰,外界对于这些对象只需要知道它们共同的接口,而不清楚其具体的实现细节,使整个系统的设计更加符合单一职责原则.  
 创建型模式在创建什么(What),由谁创建(Who),何时创建(When)等方面都为软件设计者提供了尽可能大的灵活性.  
 创建型模式隐藏了类的实例的创建细节,通过隐藏对象如何被创建和组合在一起达到使整个系统独立的目的. 
-![image](https://github.com/GaoBat/designPattern/blob/main/img/singleton.png)
  
 #### 1.singleton单例模式(懒汉/饿汉)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/singleton.png)
 保证一个类只有一个实例,并提供一个访问它的全局访问点
 单例模式只允许创建一个对象，因此节省内存，加快对象访问速度，因此对象需要被公用的场合适合使用，如多个模块使用同一个数据源连接对象等等。
 如： 
@@ -42,6 +42,8 @@
 2.控制资源的情况下，方便资源之间的互相通信。如线程池等。
 
 #### 2.factory工厂模式(工厂方法/抽象方法)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/factorymethod.png)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/abstractFactory.png)
 工厂模式的主要功能就是帮助我们实例化对象,new时可以考虑是否使用工厂模式
 如果你不想让某个子系统与较大的那个对象之间形成强耦合，而是想运行时从许多子系统中进行挑选的话，那么工厂模式是一个理想的选择
 将new操作简单封装，遇到new的时候就应该考虑是否用工厂模式;
