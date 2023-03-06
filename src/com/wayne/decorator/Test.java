@@ -1,4 +1,5 @@
 package com.wayne.decorator;
+
 //https://blog.csdn.net/qq_25827845/article/details/51570272
 //装饰模式
 //动态的给一个对象添加一些额外的职责.就增加功能来说,装饰模式比生成子类更加灵活
@@ -22,12 +23,12 @@ package com.wayne.decorator;
 //在面向对象的程序设计中,通常是使用继承的关系来扩展给定类的功能.
 public class Test {
     public static void main(String[] args) {
-//要修饰的对象com
-Component com=new ConcreteComponent();
-//进行第一次修饰
-com=new ConcreteDecorator1(com);
-//进行第二次修饰
-com=new ConcreteDecorator2(com);
-com.operate();
+        //要修饰的对象com
+        Component com = new ConcreteComponent();
+        //进行第一次修饰
+        com = new ConcreteDecorator1(com);
+        //进行第二次修饰
+        com = new ConcreteDecorator2(com);
+        com.operate();
     }
 }

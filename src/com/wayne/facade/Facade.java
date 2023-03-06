@@ -11,6 +11,7 @@ public class Facade {
     public void method(String s){
         String resA = subA.methodA(s);
         String resB = subB.methodB(resA);
-        subC.methodC(resB);
+        String resC = subC.methodC(resB);
+        System.out.println(resC);
     }
 }
