@@ -55,7 +55,8 @@
 尽管不需要根据不同的类型创建不同的对象，但是，单个对象本身的创建过程比较复杂，比如要组合其他类对象，做各种初始化操作。
 在这种情况下，也可以考虑使用工厂模式，将对象的创建过程封装到工厂类中。
 对于第一种情况，当每个对象的创建逻辑都比较简单的时候，推荐使用简单工厂模式，将多个对象的创建逻辑放到一个工厂类中。
-当每个对象的创建逻辑都比较复杂的时候，为了避免设计一个过于庞大的简单工厂类，推荐使用工厂方法模式，将创建逻辑拆分得更细，每个对象的创建逻辑独立到各自的工厂类中。
+当每个对象的创建逻辑都比较复杂的时候，为了避免设计一个过于庞大的简单工厂类，推荐使用工厂方法模式，将创建逻辑拆分得更细，
+每个对象的创建逻辑独立到各自的工厂类中。
 同理，对于第二种情况，因为单个对象本身的创建逻辑就比较复杂，所以，建议使用工厂方法模式。
 置于抽象工厂模式，使用场景不多。如果碰到一个工厂需要承担多种不同类型的对象创建时，可以考虑使用
 
@@ -68,6 +69,7 @@ https://blog.csdn.net/xu404741377/article/details/73699523?spm=1001.2101.3001.66
 
 #### 4.prototype(原型)
 用原型实例指定创建对象的种类,并且通过拷贝这些原型创建新的对象
+![image](https://github.com/GaoBat/designPattern/blob/main/img/prototype.png)
 (1)类初始化需要消化非常多的资源,这个资源包括数据、硬件资源等,通过原型拷贝避免这些消耗。
 (2)通过new一个对象需要非常繁琐的数据准备或访问权限,可以使用原型模式。
 (3)一个对象需要提供给其他对象访问,而且各个调用者可能需要修改其值,可以考虑使用原型模式拷贝多个对象供调用者使用,即保护性拷贝
@@ -77,6 +79,7 @@ https://blog.csdn.net/xu404741377/article/details/73699523?spm=1001.2101.3001.66
 就像搭积木,可以通过简单积木的组合形成复杂的;功能更为强大的结构
 
 #### 5.adapter(适配器)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/adapter.png)
 使用类再生的两个方式:组合和继承
 将两个不兼容的类纠合在一起使用，属于结构型模式,需要有 Adaptee(被适配者)和 Adaptor(适配器)两个身份
 适配器模式的应用场景:
@@ -87,6 +90,7 @@ https://blog.csdn.net/xu404741377/article/details/73699523?spm=1001.2101.3001.66
 生活中也非常的应用场景，例如电源插转换头、手机充电转换头、显示器转接头。
 
 #### 6.proxy(代理)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/proxy.png)
 代理(proxy)是一种设计模式,提供了对目标对象另外的访问方式:即通过代理对象访问目标对象
 这样的好处是:可以在目标对象实现的基础上,增强额外的功能操作,即扩展目标对象的功能
 这里使用到编程中的一个思想:不要随意去改变别人已经写好的代码或者方法
@@ -97,10 +101,15 @@ jdk动态代理
 cglib动态代理
 
 #### 7.facade(门面)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/facade.png)
 外观模式:为子系统的接口提供一组统一的入口.外观模式定义了一个高层接口,这个接口使得子系统更加容易使用
 外观模式是迪米特法则的一种具体实现,通过引入一个外观角色降低原有系统的复杂度,同时降低客户类与子系统的耦合度.
 Facade模式主要用于简化客户调用各种子系统的过程和解耦它们的联系，还可以用于开发时各种模块的划分，
 比如提供Facade模块暴露给客户我们复杂的底层处理功能。
+Facade模式，又叫做门面模式，指的是针对于庞大的类之间错综复杂的关系而提出的一种想法，
+就相当于我们开发web应用程序的时候使用的controller，service，dao层一样，把底部的与数据库交互的类以及对数据进行操作的类给封装起来，
+对外只提供contorller的数据接口，而这个controller就相当于是一个窗口。所以，我觉得，窗口模式，更多的是一种思维方式，
+同样的工具类的思维方式也是同这个相似。
 优点：
 1、减少系统相互依赖。
 2、提高灵活性。
@@ -112,20 +121,24 @@ Facade模式主要用于简化客户调用各种子系统的过程和解耦它�
 3、预防低水平人员带来的风险。
 
 #### 8.composite(组合)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/composite.png)
 将对象组合成树形结构以表示“部分-整体”的层次结构。Composite使得用户对单个对象和组合对象的使用具有一致性。
 
 #### 9.decorator(装饰器)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/decorator.png)
 假如现在有一块蛋糕， 加上奶油就是奶油蛋糕。如果继续再加上草莓，就是草莓蛋糕，再加点蜡烛，就变成了生日蛋糕。不论是蛋糕、奶油蛋糕、草莓蛋糕还是生日蛋糕，它们的核心都是蛋糕。
 像这样不断地为对象添加装饰的设计模式被称为Decorator模式。
 这个添加的过程有点类似于套娃。就是一个很原始的对象，一直在它外层套东西，不断地装饰它。
 
 #### 10.bridge(桥连)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/bridge.png)
 不同对象间的组合产生不同的结果，将抽象和实现进行分离，当然，如果要扩展功能的，只要实现相应的接口，继承对应的类。
 它的主要特点是把抽象（abstraction）与行为实现（implementation）分离开来，让系统更加符合“单一职责原则”。
 从而可以保持各部分的独立性以及应对它们的功能扩展。与多层继承方案不同，它将两个独立变化的维度设计为两个独立的继承等级结构，
 并且在抽象层建立一个抽象关联，该关联关系就像一条桥一样，将两个独立继承结构的类联接起来，故名桥接模式。
 
 #### 11.flyweight(共享元)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/flyweight.png)
 享元（Flyweight）模式的定义：运用共享技术来有効地支持大量细粒度对象的复用。
 它通过共享已经存在的又橡来大幅度减少需要创建的对象数量、避免大量相似类的开销，从而提高系统资源的利用率。
 享元模式的主要优点是：相同对象只要保存一份，这降低了系统中对象的数量，从而降低了系统中细粒度对象给内存带来的压力。
@@ -137,31 +150,41 @@ Facade模式主要用于简化客户调用各种子系统的过程和解耦它�
 关注于对象的行为问题,是对在不同的对象之间划分责任和算法的抽象化,不仅仅关注类和对象的结构,而且重点关注它们之间的相互作用
 
 #### 12.command(命令)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/command.png)
 
 #### 13.observer(观察者)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/observer.png)
 
 #### 14.iterator(迭代器模式)
 这个模式已经被整合入java的Collection,在大多数场合下无需自己创造一个Iterator,只要将对象装入Collection中,
 直接使用Iterator进行对象遍历
 
 #### 15.template(模板方法)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/template.png)
 
 #### 16.strategy(策略)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/strategy.png)
 不同算法各自封装,用户端可以随意挑选需要的算法
 
 #### 17.chain of responsibility(职责链)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/chainofresponsibility.png)
 各司其职的类串成一串,如果自己能完成则不推委下一个
 
-#### 18.Mediator(中介)
+#### 18.mediator(中介)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/mediator.png)
 
 #### 19.state(状态)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/state.png)
 状态是编程中经常遇到的实例,将状态对象化,设立状态变换器,便可在状态中轻松切换
 
 #### 20.memento(备忘录)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/memento.png)
 很简单的一个模式,就是在内存中保留原来数据的拷贝
 
 #### 21.interpreter(解释器)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/interpreter.png)
 主要用来对语言的分析,应用机会不多
 
 #### 22.vistor(访问者)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/vistor.png)
 访问者在进行访问时,完成一系列实质性的操作,而且还可以扩展
