@@ -1,5 +1,5 @@
 package com.wayne.bridge;
-
+//扩充抽象类
 public abstract class AbComputerBrank {
     public IcpuAvaliable icpuAvaliable;
 

@@ -1,3 +1,4 @@
+# 菜鸟:https://www.runoob.com/design-pattern/design-pattern-tutorial.html
 # https://www.cnblogs.com/fengmo2427/p/16130648.html
 # designPattern
 ## java设计模式
@@ -88,6 +89,9 @@ https://blog.csdn.net/xu404741377/article/details/73699523?spm=1001.2101.3001.66
 1、已经存在的类，它的方法和需求不匹配（方法结果相同或相似）的情况。
 2、适配器模式不是软件设计阶段考虑的设计模式，是随着软件维护，由于不同产品、不同厂家造成功能类似而接口不相同情况下的解决方案。有点亡羊补牢的感觉。
 生活中也非常的应用场景，例如电源插转换头、手机充电转换头、显示器转接头。
+https://blog.csdn.net/u011077231/article/details/129164693
+https://blog.csdn.net/CoderPOPO/article/details/89062434
+http://www.blogjava.net/dreamstone/archive/2007/01/07/92268.html
 
 #### 6.proxy(代理)
 ![image](https://github.com/GaoBat/designPattern/blob/main/img/proxy.png)
@@ -126,17 +130,19 @@ Facade模式，又叫做门面模式，指的是针对于庞大的类之间错�
 
 #### 9.decorator(装饰器)
 ![image](https://github.com/GaoBat/designPattern/blob/main/img/decorator.png)
+动态的给一个对象添加一些额外的职责.就增加功能来说,装饰模式比生成子类更加灵活
 假如现在有一块蛋糕， 加上奶油就是奶油蛋糕。如果继续再加上草莓，就是草莓蛋糕，再加点蜡烛，就变成了生日蛋糕。不论是蛋糕、奶油蛋糕、草莓蛋糕还是生日蛋糕，它们的核心都是蛋糕。
 像这样不断地为对象添加装饰的设计模式被称为Decorator模式。
 这个添加的过程有点类似于套娃。就是一个很原始的对象，一直在它外层套东西，不断地装饰它。
 
-#### 10.bridge(桥连)
+#### 10.bridge(桥接)
 ![image](https://github.com/GaoBat/designPattern/blob/main/img/bridge.png)
 不同对象间的组合产生不同的结果，将抽象和实现进行分离，当然，如果要扩展功能的，只要实现相应的接口，继承对应的类。
 它的主要特点是把抽象（abstraction）与行为实现（implementation）分离开来，让系统更加符合“单一职责原则”。
 从而可以保持各部分的独立性以及应对它们的功能扩展。与多层继承方案不同，它将两个独立变化的维度设计为两个独立的继承等级结构，
 并且在抽象层建立一个抽象关联，该关联关系就像一条桥一样，将两个独立继承结构的类联接起来，故名桥接模式。
-
+https://blog.csdn.net/whiteBearClimb/article/details/103845374
+https://www.jianshu.com/p/f4bd9dc5bbb5
 #### 11.flyweight(共享元)
 ![image](https://github.com/GaoBat/designPattern/blob/main/img/flyweight.png)
 享元（Flyweight）模式的定义：运用共享技术来有効地支持大量细粒度对象的复用。
@@ -151,6 +157,8 @@ Facade模式，又叫做门面模式，指的是针对于庞大的类之间错�
 
 #### 12.command(命令)
 ![image](https://github.com/GaoBat/designPattern/blob/main/img/command.png)
+命令模式可以将请求发送者和接收者完全解耦，发送者与接收者之间没有直接引用关系，发送请求的对象只需要知道如何发送请求，而不必知道如何完成请求.
+定义:将一个请求封装为一个对象，从而让我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作.
 
 #### 13.observer(观察者)
 ![image](https://github.com/GaoBat/designPattern/blob/main/img/observer.png)
@@ -186,5 +194,5 @@ Facade模式，又叫做门面模式，指的是针对于庞大的类之间错�
 主要用来对语言的分析,应用机会不多
 
 #### 22.vistor(访问者)
-![image](https://github.com/GaoBat/designPattern/blob/main/img/vistor.png)
+![image](https://github.com/GaoBat/designPattern/blob/main/img/visitor.png)
 访问者在进行访问时,完成一系列实质性的操作,而且还可以扩展

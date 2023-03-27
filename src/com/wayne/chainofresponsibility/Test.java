@@ -1,4 +1,5 @@
 package com.wayne.chainofresponsibility;
+//https://www.cnblogs.com/adamjwh/p/10932216.html
 //https://blog.csdn.net/zhenghuishengq/article/details/126809945
 //职责链模式:就是将链中的每一个节点看作是一个对象,每个节点处理请求均不同,且内部自动维护一个下一个节点对象
 //当请求从链条的首端出发时,会沿着链的路径依次传递给每一个节点的对象,直到有对象处理这个请求为止
